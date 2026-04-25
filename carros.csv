@@ -1,0 +1,51 @@
+Modelo,Tipo,Combustivel,Preco
+Fiat Mobi,Hatch,Flex,Baixo
+Fiat Argo,Hatch,Flex,Médio
+Fiat Cronos,Sedan,Flex,Médio
+Fiat Toro,Pickup,Diesel,Alto
+Volkswagen Gol,Hatch,Flex,Baixo
+Volkswagen Polo,Hatch,Flex,Médio
+Volkswagen Virtus,Sedan,Flex,Médio
+Volkswagen T-Cross,SUV,Flex,Alto
+Chevrolet Onix,Hatch,Flex,Médio
+Chevrolet Onix Plus,Sedan,Flex,Médio
+Chevrolet Tracker,SUV,Flex,Alto
+Chevrolet S10,Pickup,Diesel,Alto
+Hyundai HB20,Hatch,Flex,Médio
+Hyundai HB20S,Sedan,Flex,Médio
+Hyundai Creta,SUV,Flex,Alto
+Toyota Corolla,Sedan,Híbrido,Alto
+Toyota Corolla Cross,SUV,Híbrido,Alto
+Toyota Hilux,Pickup,Diesel,Alto
+Honda Civic,Sedan,Gasolina,Alto
+Honda HR-V,SUV,Flex,Alto
+Honda City,Sedan,Flex,Médio
+Nissan Kicks,SUV,Flex,Médio
+Nissan Versa,Sedan,Flex,Médio
+Renault Kwid,Hatch,Flex,Baixo
+Renault Sandero,Hatch,Flex,Médio
+Renault Duster,SUV,Flex,Médio
+Jeep Renegade,SUV,Flex,Alto
+Jeep Compass,SUV,Diesel,Alto
+Jeep Commander,SUV,Diesel,Alto
+Ford Ranger,Pickup,Diesel,Alto
+Ford Territory,SUV,Gasolina,Alto
+Peugeot 208,Hatch,Flex,Médio
+Peugeot 2008,SUV,Flex,Médio
+Citroën C3,Hatch,Flex,Baixo
+Citroën C4 Cactus,SUV,Flex,Médio
+Caoa Chery Tiggo 5X,SUV,Flex,Médio
+Caoa Chery Tiggo 7,SUV,Gasolina,Alto
+BYD Dolphin,Hatch,Elétrico,Alto
+BYD Song Plus,SUV,Híbrido,Alto
+GWM Haval H6,SUV,Híbrido,Alto
+Mitsubishi L200,Pickup,Diesel,Alto
+Mitsubishi Eclipse Cross,SUV,Gasolina,Alto
+Suzuki Jimny,SUV,Gasolina,Médio
+RAM Rampage,Pickup,Diesel,Alto
+RAM 1500,Pickup,Gasolina,Alto
+BMW X1,SUV,Gasolina,Alto
+BMW 320i,Sedan,Gasolina,Alto
+Audi A3,Sedan,Gasolina,Alto
+Audi Q3,SUV,Gasolina,Alto
+Mercedes-Benz GLA,SUV,Gasolina,Alto
