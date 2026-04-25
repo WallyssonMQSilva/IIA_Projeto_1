@@ -15,37 +15,18 @@ class MotorTFIDF:
         # fit_transform cria o vocabulário base com os 50 carros e já gera a matriz matemática
         self.matriz_tfidf_carros = self.vetorizador.fit_transform(self.df['Caracteristicas'])
 
-    def recomendar_por_perfil(self, tipo, combustivel, preco, top_n=5):
-        """
-        Recebe as preferências do usuário e retorna os N carros mais similares.
-        """
-        #Transforma o input do usuário na mesma estrutura de texto dos carros
-        perfil_usuario = f"{tipo} {combustivel} {preco}"
-        
-        # Vetoriza o perfil do usuário 
+    def calcular_scores(self, perfil_usuario):
+        # Transforma o perfil do usuário em números usando o mesmo vetorizador
         vetor_usuario = self.vetorizador.transform([perfil_usuario])
         
-        # Calcula a Similaridade de Cosseno
-        similaridades = cosine_similarity(vetor_usuario, self.matriz_tfidf_carros)
+        # Calcula a similaridade (valores de 0 a 1)
+        similaridades = cosine_similarity(vetor_usuario, self.matriz_tfidf_carros).flatten()
         
-        # similaridades retorna uma matriz 2D. Pegamos o primeiro (e único) array de resultados
-        scores_similaridade = similaridades[0]
-        
-        # Adiciona os scores ao dataframe temporariamente para ranquear
-        df_resultados = self.df.copy()
-        df_resultados['Score_Similaridade'] = scores_similaridade
-        
-        # Ordena os resultados do maior score para o menor e pega os top_N
-        recomendacoes = df_resultados.sort_values(by='Score_Similaridade', ascending=False).head(top_n)
-        
-        # Retorna apenas as colunas relevantes
-        return recomendacoes[['Modelo', 'Tipo', 'Combustivel', 'Preco', 'Score_Similaridade']]
-
-#Teste Local
-
-if __name__ == "__main__":
-    motor = MotorTFIDF()
-    print("Testando recomendação para um perfil: SUV, Híbrido, Alto\n")
+        # Monta o dicionário de resposta
+        dicionario_scores = {}
+        for idx, linha in self.df.iterrows():
+            nome_carro = linha['Modelo']
+            dicionario_scores[nome_carro] = similaridades[idx]
+            
+        return dicionario_scores
     
-    resultados = motor.recomendar_por_perfil("SUV", "Híbrido", "Alto")
-    print(resultados)
